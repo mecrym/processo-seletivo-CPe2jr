@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+body{
+    background-color: #202024;
+    color: #FFFFFF;
+
+}
+
+.fundo-header{
+    margin-top: 0;
+    width: 100vw;
+    height: 212px;
+    opacity: 1;
+    background: #121214;
+}
+
+.btn{
+    background-color: #FAAE2B;
+    width: 160px;
+    height: 50px;
+    opacity: 1;
+    gap: 10px;
+    border-radius: 6px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    border: none;
+    /*configurações do texto dos botões*/
+    color: #FFFFFF;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 0.875em;
+    line-height: 160%;
+    letter-spacing: 0%;
+}
+
+.btn:hover {
+    cursor: pointer!important;
+}
+
+.logo-btn-transacao{
+    padding-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 160px;
+    margin-right: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container, totais{
+    height: 137px;
+    opacity: 1px;
+    margin-top: 5px;/*original é 130px*/
+    margin-left: 160px;
+    margin-right: 160px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+
+}
+
+.card{
+    background-color: #323238;
+    width: 352px;
+    height: 137px;
+    opacity: 1;
+    border-radius: 6px;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+}
+
+.card-total{
+    background-color: #FAAE2B;
+}
+
+.titulos-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.busca{
+    margin-top: 32px;
+    margin-left: 160px;
+    margin-right: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-control{
+    background-color: #121214;
+    width: 850px;
+    height: 54px;
+    gap: 12px;
+    border-radius: 6px;
+    padding: 16px;
+    border: none;
+    color: #FFFFFF;
+}
+
+.btn-busca{
+    background-color: #202024;
+    border: #FAAE2B solid 1px;
+    color: #FAAE2B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-busca:hover, .btn:hover, .icone-busca:hover {
+    cursor: pointer!important;
+}
+
+/* modal escondido por padrão */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0; /* top, right, bottom, left = 0 */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* quando ativo, ele aparece */
+.modal.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    padding: 20px;
+    position: relative;
+    width: 535px;
+    height: 528px;
+    border-radius: 6px;
+    background-color: #202024;
+    font-family: 'Roboto Mono', monospace !important;
+    color: #FFFFFF;
+}
+
+.modal-titulo{
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 48px;
+    margin-left: 48px;
+}
+.modal-fechar {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.form-transacao-input{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px;
+    margin-left: 48px;
+    margin-right: 48px;
+    width: 400px;/*439*/
+    height: 54px;
+    background-color: #121214;
+    border-radius: 6px;
+    border: none;
+    padding: 16px;
+    color: #FFFFFF;
+}
+
+.entrada-saida{
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    margin-left: 48px !important;
+}
+.entrada-saida-form{
+    margin-bottom: 32px;
+    height: 50px;
+    width: 196px;/*211.5*/
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #29292E;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.btn-submit-form {
+    width: 400px;
+    margin-left: 48px;
+}
+
+/* Esconda os radio buttons mas mantenha funcionais */
+.radio-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Faça os labels se comportarem como os botões anteriores */
+.radio-option {
+    cursor: pointer;
+}
+
+/* Estilos para quando estiver selecionado */
+.radio-option input[type="radio"]:checked + .entrada-saida-form {
+    background-color: #015F43;
+    border: 1px solid #00B37E;
+}
+
+.radio-option input[type="radio"][value="saida"]:checked + .entrada-saida-form {
+    background-color: #AA2834;
+    border: 1px solid #F75A68;
+}
