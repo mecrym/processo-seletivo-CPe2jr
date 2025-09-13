@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 10C16.5523 10 17 10.4477 17 11L17 21C17 21.5523 16.5523 22 16 22C15.4477 22 15 21.5523 15 21L15 11C15 10.4477 15.4477 10 16 10Z" fill="#00B37E"/>
                         </svg>
                     </div>
-                    <p class="valor-total-entradas" id="total-entradas"></p>
+                    <p class="valor-card-total" id="total-entradas"></p>
+
                 </div>
 
                 <div class="box card" id="saidas">
@@ -50,7 +51,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0001 10C16.5523 10 17.0001 10.4477 17.0001 11L17.0001 21C17.0001 21.5523 16.5523 22 16.0001 22C15.4478 22 15.0001 21.5523 15.0001 21L15.0001 11C15.0001 10.4477 15.4478 10 16.0001 10Z" fill="#F75A68"/>
                         </svg>
                     </div>
-                    <p class="valor-total-saidas" id="total-saidas"></p>
+                    <p class="valor-card-total" id="total-saidas"></p>
                 </div>
 
                 <div class="box card card-total" id="balanco-total">
@@ -61,12 +62,18 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.25736 6.75736C10.3826 5.63214 11.9087 5 13.5 5L18 5C18.7879 5 19.5681 5.15519 20.2961 5.45672C21.0241 5.75825 21.6855 6.20021 22.2426 6.75736C22.7998 7.31451 23.2417 7.97595 23.5433 8.7039C23.8448 9.43185 24 10.2121 24 11C24 11.5523 23.5523 12 23 12C22.4477 12 22 11.5523 22 11C22 10.4747 21.8965 9.95457 21.6955 9.46927C21.4945 8.98396 21.1999 8.54301 20.8284 8.17157C20.457 7.80014 20.016 7.5055 19.5307 7.30448C19.0454 7.10346 18.5253 7 18 7L13.5 7C12.4391 7 11.4217 7.42143 10.6716 8.17157C9.92143 8.92172 9.5 9.93913 9.5 11C9.5 12.0609 9.92143 13.0783 10.6716 13.8284C11.4217 14.5786 12.4391 15 13.5 15L19 15C20.5913 15 22.1174 15.6321 23.2426 16.7574C24.3679 17.8826 25 19.4087 25 21C25 22.5913 24.3679 24.1174 23.2426 25.2426C22.1174 26.3679 20.5913 27 19 27H13C11.4087 27 9.88258 26.3679 8.75736 25.2426C7.63214 24.1174 7 22.5913 7 21C7 20.4477 7.44772 20 8 20C8.55228 20 9 20.4477 9 21C9 22.0609 9.42143 23.0783 10.1716 23.8284C10.9217 24.5786 11.9391 25 13 25H19C20.0609 25 21.0783 24.5786 21.8284 23.8284C22.5786 23.0783 23 22.0609 23 21C23 19.9391 22.5786 18.9217 21.8284 18.1716C21.0783 17.4214 20.0609 17 19 17H13.5C11.9087 17 10.3826 16.3679 9.25736 15.2426C8.13214 14.1174 7.5 12.5913 7.5 11C7.5 9.4087 8.13214 7.88258 9.25736 6.75736Z" fill="white"/>
                     </svg>
                     </div>
-                    <p class="valor-total-total" id="valor-balanco-total"></p>
+                    <p class="valor-card-total" id="valor-balanco-total"></p>
                 </div>
             </div>
         </header>
+
+        <div class="titulo-busca-transacoes">
+            <h2>Transações</h2>
+            <p class="soma-num-total-transacoes" id="soma-num-total-transacoes"></p>
+        </div>
+
         <div class="busca">
-            <div class="form-group">
+            <div class="form-group form-busca">
                 <label for="busca"></label>
                 <input type="text" class="form-control" name="busca" id="busca" aria-describedby="helpId" placeholder="Busque uma transação">
             </div>
@@ -76,12 +83,13 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.0625 3.4375C5.9559 3.4375 3.4375 5.9559 3.4375 9.0625C3.4375 12.1691 5.9559 14.6875 9.0625 14.6875C12.1691 14.6875 14.6875 12.1691 14.6875 9.0625C14.6875 5.9559 12.1691 3.4375 9.0625 3.4375ZM1.5625 9.0625C1.5625 4.92036 4.92036 1.5625 9.0625 1.5625C13.2046 1.5625 16.5625 4.92036 16.5625 9.0625C16.5625 13.2046 13.2046 16.5625 9.0625 16.5625C4.92036 16.5625 1.5625 13.2046 1.5625 9.0625Z" fill="#FAAE2B"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0402 13.0402C13.4063 12.6741 13.9999 12.6741 14.366 13.0402L18.1629 16.8371C18.529 17.2032 18.529 17.7968 18.1629 18.1629C17.7968 18.529 17.2032 18.529 16.8371 18.1629L13.0402 14.366C12.6741 13.9999 12.6741 13.4063 13.0402 13.0402Z" fill="#FAAE2B"/>
                 </svg>
-                Buscar
+                <p class="text-buscar">Buscar</p>
             </button>
         </div>
     </div>
-    <div class="tansacoes" id="tansacoes">
-        <!--informações recuperadas do js-->
+
+    <div class="transacoes" id="lista-transacoes">
+
     </div>
 
     <div class="modal" id="modal-transacao">
@@ -125,6 +133,6 @@
         </div>
     </div>
 
-    <script src="../src/scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
