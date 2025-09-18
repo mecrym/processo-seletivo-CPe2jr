@@ -187,16 +187,19 @@ body{
 
 .entrada-saida{
     display: flex;
-    gap: 8px;
+    justify-content: space-between;
     margin-top: 8px;
     margin-left: 48px !important;
+    margin-right: 48px;
+    margin-bottom: 32px;
+    border-radius: 6px;
 }
 
 .entrada-saida-form{
     margin-bottom: 32px;
-    height: 50px;
+    height: 58px;
     width: 196px;
-    border-radius: 6px;
+    border-radius: 6px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,6 +223,8 @@ body{
 
 .radio-option {
     cursor: pointer;
+    background-color: #29292E !important;
+    height: 58px !important;
 }
 
 .radio-option input[type="radio"]:checked + .entrada-saida-form {
@@ -291,6 +296,11 @@ body{
     .btn {
         width: 100%;
         max-width: 200px;
+    }
+
+    .btn-submit-form {
+        max-width: 327px;
+        margin-left: 48px;
     }
     
     /* Cards dos totais em row no mobile */
@@ -403,13 +413,10 @@ body{
     .entrada-saida {
         margin-left: 20px !important;
         margin-right: 20px;
-        gap: 8px;
+        /*gap: 8px;*/
     }
     
-    .entrada-saida-form {
-        width: calc(50% - 4px);
-        font-size: 14px;
-    }
+    
     
     .btn-submit-form {
         width: calc(100% - 40px);
@@ -466,6 +473,18 @@ body{
         text-align: right; /* garante alinhamento da data à direita */
     }
 
+    .radio-option{
+        height: 58px;
+        display: flex;
+        justify-content: space-between !important;
+        margin-bottom: 16px;
+    }
+
+    .entrada-saida-form{
+        width: 150px !important;
+        height: 58px;
+        border-radius: 6px !important;
+    }
 
     /* Ajustes para telas muito pequenas */
     @media (max-width: 480px) {
@@ -505,6 +524,10 @@ body{
             font-size: 20px;
         }
         
+        .modal-transacao{
+            position:fixed;
+
+        }
         .modal-conteudo {
             width: 95vw;
             margin: 10px;
